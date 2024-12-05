@@ -45,8 +45,9 @@
 	1. Скачайте архив проекта с GitHUB
  
 	2. Имея установленный Docker выполнить команды в cmd:
-	cd {Путь до приложения}/testAssignment
-	docker-compose up -d
+
+		cd {Путь до приложения}/testAssignment
+		docker-compose up -d
 	
 
 Руководство пользователя:
