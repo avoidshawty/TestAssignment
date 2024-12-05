@@ -48,7 +48,8 @@
 	cd {Путь до приложения}/testAssignment
 	docker-compose up -d
 	
-	Руководство пользователя:
+
+•Руководство пользователя:
 	
 ▎API Endpoints
 
@@ -86,31 +87,31 @@
   }
   
    • Все атрибуты для /banks:  
- "sort_by_id"  type bool - сортировка по iD в обратном порядке
- "sort_by_bank_name" type bool - сортировка по имени банка
- "sort_by_bank_code" type bool - сортировка по БИК
- "bank_name" type String - выбор сущностей с заданным именем банка
- "bank_code" type String - выбор сущностей с заданным БИК
+ •"sort_by_id"  type bool - сортировка по iD в обратном порядке
+ •"sort_by_bank_name" type bool - сортировка по имени банка
+ •"sort_by_bank_code" type bool - сортировка по БИК
+ •"bank_name" type String - выбор сущностей с заданным именем банка
+ •"bank_code" type String - выбор сущностей с заданным БИК
  
   • Все атрибуты для /clients:  
- "sort_by_id"  type bool - сортировка по iD в обратном порядке
- "sort_by_name" type bool - сортировка по имени
- "sort_by_short_name" type bool - сортировка по сокр. имени
- "sort_by_address" type bool - сортировка по адресу
- "name" type String - выбор сущностей с заданным именем
- "short_name" type String - выбор сущностей с заданным сокр. именем
- "address" type String - выбор сущностей с заданным адресом
- "legal_form" type String - выбор сущностей с заданной правовой формой
+ •"sort_by_id"  type bool - сортировка по iD в обратном порядке
+ •"sort_by_name" type bool - сортировка по имени
+ •"sort_by_short_name" type bool - сортировка по сокр. имени
+ •"sort_by_address" type bool - сортировка по адресу
+ •"name" type String - выбор сущностей с заданным именем
+ •"short_name" type String - выбор сущностей с заданным сокр. именем
+ •"address" type String - выбор сущностей с заданным адресом
+ •"legal_form" type String - выбор сущностей с заданной правовой формой
  
    • Все атрибуты для /deposits:  
- "sort_by_id"  type bool - сортировка по iD в обратном порядке
- "sort_by_opening_date" type bool - сортировка по дате
- "sort_by_interest" type bool - сортировка по процентной ставке
- "sort_by_duration" type bool - сортировка по длительности в месяцах
- "interest" type String - выбор сущностей с заданной процентной ставкой
- "duration_in_months" type String - выбор сущностей с заданной длительностью в месяцах
- "client_name" type String - выбор сущностей с заданным клиентом
- "bank_name" type String - выбор сущностей с заданным банком
+ •"sort_by_id"  type bool - сортировка по iD в обратном порядке
+ •"sort_by_opening_date" type bool - сортировка по дате
+ •"sort_by_interest" type bool - сортировка по процентной ставке
+ •"sort_by_duration" type bool - сортировка по длительности в месяцах
+ •"interest" type String - выбор сущностей с заданной процентной ставкой
+ •"duration_in_months" type String - выбор сущностей с заданной длительностью в месяцах
+ •"client_name" type String - выбор сущностей с заданным клиентом
+ •"bank_name" type String - выбор сущностей с заданным банком
   
 ▎Реализованные сущности
 
