@@ -49,7 +49,7 @@
 	docker-compose up -d
 	
 
-•Руководство пользователя:
+Руководство пользователя:
 	
 ▎API Endpoints
 
@@ -87,6 +87,7 @@
   }
   
 • Все атрибуты для /banks:  
+
 	 •"sort_by_id"  type bool - сортировка по iD в обратном порядке
 	
 	 •"sort_by_bank_name" type bool - сортировка по имени банка
@@ -99,6 +100,7 @@
 
  
 • Все атрибуты для /clients:  
+
 	 •"sort_by_id"  type bool - сортировка по iD в обратном порядке
 	
 	 •"sort_by_name" type bool - сортировка по имени
@@ -117,6 +119,7 @@
 
  
 • Все атрибуты для /deposits:  
+
 	 •"sort_by_id"  type bool - сортировка по iD в обратном порядке
 	
 	 •"sort_by_opening_date" type bool - сортировка по дате
