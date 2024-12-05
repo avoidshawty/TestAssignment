@@ -6,8 +6,10 @@ import ru.avoid.testassignment.models.Client;
 
 public class BankSpecifications {
     public static Specification<Bank> equalBankName(String bankName) {
-        if (bankName == null)
+        if (bankName == null){
             return null;
+        }
+
         return (root, query, criteriaBuilder) -> {
             return criteriaBuilder.equal(root.get("bankName"), bankName);
         };

@@ -45,6 +45,9 @@ public class BanksService {
         }
 
         if (bankName != null && !bankName.isEmpty()) {
+            System.out.println(bankRepository.findAll(BankSpecifications.equalBankName(bankName), sort));
+            System.out.println(bankRepository.findAll(BankSpecifications.equalBankName(bankName), sort).stream().
+                    map(this::convertToBankDTO).collect(Collectors.toList()));
             return bankRepository.findAll(BankSpecifications.equalBankName(bankName), sort).stream().
                     map(this::convertToBankDTO).collect(Collectors.toList());
         }
@@ -52,6 +55,7 @@ public class BanksService {
             return bankRepository.findAll(BankSpecifications.equalBankCode(bankCode), sort).stream().
                     map(this::convertToBankDTO).collect(Collectors.toList());
         }
+
 
         return bankRepository.findAll(sort).stream().
                 map(this::convertToBankDTO).collect(Collectors.toList());

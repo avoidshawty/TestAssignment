@@ -69,4 +69,11 @@ public class Bank {
     public void setBankCode(String bankCode) {
         this.bankCode = bankCode;
     }
+
+    @Override
+    public String toString() {
+        return "Bank{" +
+                "bankName='" + bankName + '\'' +
+                '}';
+    }
 }
