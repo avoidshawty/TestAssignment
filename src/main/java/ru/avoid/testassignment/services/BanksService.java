@@ -24,15 +24,17 @@ public class BanksService {
 
     private final ModelMapper modelMapper;
 
+
+
     @Autowired
     public BanksService(BankRepository bankRepository, ModelMapper modelMapper) {
         this.bankRepository = bankRepository;
         this.modelMapper = modelMapper;
+
     }
 
     public List<BankDTO> findAll(boolean sortById, boolean sortByBankName, boolean sortByBankCode, String bankName, String bankCode) {
         Sort sort = Sort.by(Sort.Direction.ASC, "id");
-
         if (sortById) {
             sort = Sort.by(Sort.Direction.DESC, "id");
         }
@@ -45,9 +47,7 @@ public class BanksService {
         }
 
         if (bankName != null && !bankName.isEmpty()) {
-            System.out.println(bankRepository.findAll(BankSpecifications.equalBankName(bankName), sort));
-            System.out.println(bankRepository.findAll(BankSpecifications.equalBankName(bankName), sort).stream().
-                    map(this::convertToBankDTO).collect(Collectors.toList()));
+
             return bankRepository.findAll(BankSpecifications.equalBankName(bankName), sort).stream().
                     map(this::convertToBankDTO).collect(Collectors.toList());
         }
@@ -57,6 +57,8 @@ public class BanksService {
         }
 
 
+        System.out.println(bankRepository.findAll(sort).stream().
+                map(this::convertToBankDTO).collect(Collectors.toList()));
         return bankRepository.findAll(sort).stream().
                 map(this::convertToBankDTO).collect(Collectors.toList());
     }

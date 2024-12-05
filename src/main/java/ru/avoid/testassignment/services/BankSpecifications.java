@@ -1,8 +1,10 @@
 package ru.avoid.testassignment.services;
 
 import org.springframework.data.jpa.domain.Specification;
+import org.springframework.transaction.annotation.Transactional;
 import ru.avoid.testassignment.models.Bank;
 import ru.avoid.testassignment.models.Client;
+
 
 public class BankSpecifications {
     public static Specification<Bank> equalBankName(String bankName) {

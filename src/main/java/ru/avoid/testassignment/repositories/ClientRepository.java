@@ -1,6 +1,7 @@
 package ru.avoid.testassignment.repositories;
 
 import jakarta.persistence.Entity;
+import org.springframework.data.domain.Sort;
 import org.springframework.data.jpa.domain.Specification;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.JpaSpecificationExecutor;
@@ -17,4 +18,5 @@ public interface ClientRepository extends JpaRepository<Client, Integer>, JpaSpe
     //VALIDATION
     Optional<Client> findByName(String name);
     List<Client> findAll();
+
 }
