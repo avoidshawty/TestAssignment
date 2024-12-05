@@ -1,0 +1,29 @@
+version: '3.1'
+
+volumes:
+  pg_testAssignment:
+
+services:
+  testAssignment_db:
+    image: postgres
+    command: postgres -c datestyle='iso, dmy'
+    restart: always
+    environment:
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=1237
+      - POSTGRES_DB=test_assignment
+    volumes:
+      - pg_testAssignment:/var/lib/postgresql/data
+      - ./init_DB.sql:/docker-entrypoint-initdb.d/init_DB.sql
+    ports:
+      - "127.0.0.1:5433:5432"
+  app:
+    restart: always
+    build: ../testAssignment
+    ports:
+      - "8080:8080"
+    depends_on:
+      - testAssignment_db
+    environment:
+      SPRING_DATASOURCE_URL: 'jdbc:postgresql://testAssignment_db:5432/test_assignment'
+      JAVA-OPTS: '-Xmx512m'
