@@ -70,10 +70,4 @@ public class Bank {
         this.bankCode = bankCode;
     }
 
-    @Override
-    public String toString() {
-        return "Bank{" +
-                "bankName='" + bankName + '\'' +
-                '}';
-    }
 }

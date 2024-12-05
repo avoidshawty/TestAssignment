@@ -6,7 +6,6 @@ import jakarta.validation.constraints.Size;
 import lombok.Builder;
 import lombok.EqualsAndHashCode;
 
-@EqualsAndHashCode
 public class BankDTO {
     @Size(min = 2, max = 50, message = "name isn't valid")
     private String bankName;

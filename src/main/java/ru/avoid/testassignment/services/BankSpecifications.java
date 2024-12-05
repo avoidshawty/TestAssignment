@@ -16,7 +16,7 @@ public class BankSpecifications {
             return criteriaBuilder.equal(root.get("bankName"), bankName);
         };
     }
-
+    //TODO
     public static Specification<Bank> equalBankCode(String bankCode) {
         if (bankCode == null)
             return null;
